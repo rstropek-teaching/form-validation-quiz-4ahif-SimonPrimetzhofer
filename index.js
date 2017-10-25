@@ -5,6 +5,19 @@
     I tried but without any success.
     Probably it would be shorter and more efficient, but it also works this way...
 
+           _..._
+         .'     '.
+        /  _   _  \
+        | (o)_(o) |
+         \(     ) /
+         //'._.'\ \
+        //   .   \ \
+       ||   .     \ \       Linux? rm -rf * is the solution
+       |\   :     / |
+       \ `) '   (`  /_
+     _)``".____,.'"` (_
+     )     )'--'(     (
+      '---`      `---`
 */
 /*
 
@@ -59,7 +72,7 @@ function validateNewsletter() {
     else
         show = "none";
     document.getElementById("emailMandatory").style.display = show;
-    return (show === 'none');
+    return (show === 'none' && checkbox.checked);
 }
 /*
 

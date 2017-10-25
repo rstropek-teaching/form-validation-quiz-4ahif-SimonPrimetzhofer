@@ -69,7 +69,7 @@ function validateNewsletter() :boolean {
         show="block";
     else show="none";
     (<HTMLInputElement>document.getElementById("emailMandatory")).style.display=show;       
-    return (show==='none');
+    return (show==='none'&&checkbox.checked);
 }
 /*
 
