@@ -19,6 +19,10 @@
       '---`      `---`
 */
 
+// Tip: I like that you add documentation to functions. Consider writing such documentation
+//      according to the JSDoc standard (see http://usejsdoc.org/). You can auto-create 
+//      beautiful documentation websites if you use this standard way of writing comments.
+
 /*
 
     Function validateAll() calls every validation function returning a boolean value.
@@ -27,6 +31,9 @@
 
 */
 function validateAll() :void {
+    // Tip: Avoid repeating the type (`HTMLInputElement`) on both sides of the assignment.
+    //      It is enough on the right side. TypeScript will set the variable's type
+    //      automatically.
     let submitButton:HTMLInputElement=<HTMLInputElement>document.getElementById("submit");
     if(validateName("firstName")==validateName("lastName")==validateNewsletter()==true){
         submitButton.disabled=false;
@@ -44,8 +51,11 @@ function validateAll() :void {
 
 */
 function validateName(name:string) :boolean {
+    // Tip: Don't add the TypeScript type on the left side of the assignment. TypeScript will
+    //      figure out the correct type automatically.
     let value:string=(<HTMLInputElement>document.getElementById(name)).value;
     let hide:boolean=false;
+    // Tip: Use falsy-check in code like the one in the following line (`if (value)`).
     if(value!==""){
         hide=true;
     }else hide=false;
